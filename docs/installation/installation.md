@@ -103,4 +103,4 @@ To upgrade the Java Agent, simply install the new package to the same directory 
 
 ## Silent mode
 
-To learn how to install the Java Agent in silent mode, refer to [Silent Mode](https://help.smatechnologies.com/opcon/core/latest/Files/Installation/Component%20Installations.htm#Silent) in the **OpCon Installation** online help.
+To learn how to install the Java Agent in silent mode, refer to [Silent Mode](https://help.smatechnologies.com/opcon/core/installation/components#silent-mode) in the **OpCon Installation** online help.

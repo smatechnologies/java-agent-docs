@@ -3,7 +3,7 @@
 The Agent.config is the Java Agent configuration file name. The configuration of the Java Agent requires setting the required properties in the Agent.config file located in the <Configuration Directory\>\\Java Agent \[CPU\]\\ directory.
 
 :::note
-The Configuration Directory is based on where you installed your programs. For more information, refer to [File Locations](https://help.smatechnologies.com/opcon/core/latest/Files/Concepts/File%20Locations.htm) in the **Concepts** online help.
+The Configuration Directory is based on where you installed your programs. For more information, refer to [File Locations](https://help.smatechnologies.com/opcon/core/file-locations) in the **Concepts** online help.
 :::
 
 The following settings are critical to the operation of the Agent with OpCon:
