@@ -1,4 +1,18 @@
-# Release notes
+---
+sidebar_label: 'Release notes'
+---
+
+# Java Agent release notes
+
+## Java Agent 21.0.0
+
+2022 January
+
+:white_check_mark: **JAVA-32**: Replaced log4j with slj4j and logback for Java Agent logging component.  Related to CVE-2021-44228.
+
+:white_check_mark: **JAVA-33**: Replaced log4j with slj4j and logback for Java Proxy Agent logging component.  Related to CVE-2021-44228.
+
+:white_check_mark: **JAVA-34**: Update logback to support two log files and dynamic creation of log file path.
 
 ## Java Agent 17.0.0
 
