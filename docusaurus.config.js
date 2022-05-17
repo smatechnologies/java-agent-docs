@@ -36,6 +36,9 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-7XYMFXX81Y',
+        },
       },
     ],
   ],
@@ -43,7 +46,7 @@ module.exports = {
     [
       require.resolve('@cmfcmf/docusaurus-search-local'), 
       {
-        docsRouteBasePath: '/', 
+      
       }
     ],
   ],
