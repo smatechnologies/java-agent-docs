@@ -1,16 +1,73 @@
 ---
 slug: '/'
 sidebar_label: 'Java Agent'
+hide_table_of_contents: true
+displayed_sidebar: null
 ---
 
-# Getting started
+# Java Agent
 
 The Java Agent is an OpCon agent that allows OpCon to schedule Java classes and scripts or programs within a Java environment.
 
-The current version is **21.0.0**.
+<div style={{display: 'flex', gap: '0.75rem', alignItems: 'flex-start', flexWrap: 'wrap', marginTop: '1rem'}}>
 
-Each Java class, script, or executable is executed as part of the Java Agent within a separate thread which is terminated when the execution is complete. When executing Java classes with named methods (non-main method), the execution is performed within a separate thread of the Java Agent JVM. When executing Java classes using the main method and scripts or executables, the execution is performed within a separate thread that spawns a separate JVM for the duration of the execution. Standard output and error logs are collected and appended to the job output information which is accessible from the OpCon environment using the JORS capability.
+<div style={{flex: '1', minWidth: '160px', display: 'flex', flexDirection: 'column', gap: '0.6rem'}}>
 
-Parameters can be passed to the Java class methods and the script or executable. The parameters are defined using the job definition of the Java job.
+<div style={{background: 'var(--ifm-card-background-color)', border: '1px solid var(--ifm-color-emphasis-400)', borderRadius: '10px', padding: '0.75rem 1rem'}}>
 
-For the Java Agent to execute a Java class, the library files (.jar files) required by the class must be loaded into the class path of the Java Agent. During the Java Agent startup, the library files (.jar files) are loaded into the class path. The Java Agent includes listeners that monitor for changes. When changes occur, the Java Agent will add the new information to the Java Agent class path.
+### Overview
+
+- [Overview](./overview.md)
+- [Release Notes](./release-notes.md)
+
+</div>
+
+<div style={{background: 'var(--ifm-card-background-color)', border: '1px solid var(--ifm-color-emphasis-400)', borderRadius: '10px', padding: '0.75rem 1rem'}}>
+
+### Installation
+
+- [Installation](./installation/installation.md)
+
+</div>
+
+</div>
+
+<div style={{flex: '1', minWidth: '160px', display: 'flex', flexDirection: 'column', gap: '0.6rem'}}>
+
+<div style={{background: 'var(--ifm-card-background-color)', border: '1px solid var(--ifm-color-emphasis-400)', borderRadius: '10px', padding: '0.75rem 1rem'}}>
+
+### Administration
+
+- [Configuration file](./administration/configuration-file.md)
+
+</div>
+
+</div>
+
+<div style={{flex: '1', minWidth: '160px', display: 'flex', flexDirection: 'column', gap: '0.6rem'}}>
+
+<div style={{background: 'var(--ifm-card-background-color)', border: '1px solid var(--ifm-color-emphasis-400)', borderRadius: '10px', padding: '0.75rem 1rem'}}>
+
+### Operations
+
+- [Java classes](./operations/java-classes.md)
+- [Scripts and executables](./operations/scripts-executables.md)
+- [Managing software libraries](./operations/managing-software-libraries.md)
+
+</div>
+
+</div>
+
+<div style={{flex: '1', minWidth: '160px', display: 'flex', flexDirection: 'column', gap: '0.6rem'}}>
+
+<div style={{background: 'var(--ifm-card-background-color)', border: '1px solid var(--ifm-color-emphasis-400)', borderRadius: '10px', padding: '0.75rem 1rem'}}>
+
+### Reference
+
+- [Machine messages](./reference/machine-messages.md)
+
+</div>
+
+</div>
+
+</div>

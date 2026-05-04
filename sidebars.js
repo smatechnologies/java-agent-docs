@@ -1,40 +1,57 @@
 module.exports = {
   mySidebar: [
     'index',
+    'overview',
     'release-notes',
     {
-      type: 'category', 
+      type: 'category',
       label: 'Installation',
-      collapsed: false,
+      link: {
+        type: 'doc',
+        id: 'installation/overview',
+      },
+      collapsed: true,
       items: [
         'installation/installation',
-      ], 
+      ],
     },
     {
-      type: 'category', 
+      type: 'category',
       label: 'Administration',
-      collapsed: false,
+      link: {
+        type: 'doc',
+        id: 'administration/overview',
+      },
+      collapsed: true,
       items: [
         'administration/configuration-file',
-      ], 
+      ],
     },
     {
-      type: 'category', 
+      type: 'category',
       label: 'Operations',
-      collapsed: false,
+      link: {
+        type: 'doc',
+        id: 'operations/overview',
+      },
+      collapsed: true,
       items: [
         'operations/java-classes',
         'operations/scripts-executables',
         'operations/managing-software-libraries',
-      ], 
+      ],
     },
     {
-      type: 'category', 
+      type: 'category',
       label: 'Reference',
-      collapsed: false,
+      link: {
+        type: 'doc',
+        id: 'reference/overview',
+      },
+      collapsed: true,
       items: [
         'reference/machine-messages',
-      ], 
+      ],
     },
   ],
 };
