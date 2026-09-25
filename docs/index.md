@@ -1,6 +1,13 @@
 ---
 slug: '/'
 sidebar_label: 'Java Agent'
+title: Java Agent
+description: "OpCon agent that allows OpCon to schedule Java classes and scripts or programs within a Java environment. Covers installation, configuration, operations, and reference."
+tags:
+  - Conceptual
+  - System Administrator
+  - Automation Engineer
+  - Agents
 hide_table_of_contents: true
 displayed_sidebar: null
 ---

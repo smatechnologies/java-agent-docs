@@ -17,7 +17,7 @@ The Java Agent runs Java classes defined in OpCon job definitions. It supports t
 - Use named method when the class contains specific business logic methods you want OpCon to call directly
 - Use main method when the class follows a standard command-line entry point pattern or accepts arguments as a string array
 
-When the Java Agent is installed on the same system as the Java classes, the agent needs access to the Java libraries (`.jar` files) that contain the classes. All required libraries must be loaded into the agent's class path before a job runs. For information on loading libraries, refer to [Managing Software Libraries](managing-software-libraries).
+When the Java Agent is installed on the same system as the Java classes, the agent needs access to the Java libraries (`.jar` files) that contain the classes. All required libraries must be loaded into the agent's class path before a job runs. For information on loading libraries, refer to [Managing Software Libraries](managing-software-libraries.md).
 
 The Java Agent can run classes that contain either a named method or the default main method of the class.
 
