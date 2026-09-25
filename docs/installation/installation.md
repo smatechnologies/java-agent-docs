@@ -41,19 +41,19 @@ To install the Java Agent, complete the following steps:
 
 1. Log in to the Windows machine as a Local Administrator.
 2. Exit all running applications on the desktop, including OpCon applications.
-3. Open **setup.exe** on the root of the OpCon installation media. The **Choose Setup Language** screen displays.
-4. Select the desired language and select **Next**. The **Welcome** screen displays.
-5. Select **Next**. The **Select Components** screen displays.
+3. Open **setup.exe** on the root of the OpCon installation media. The **Choose Setup Language** step displays.
+4. Select the desired language and select **Next**. The **Welcome** step displays.
+5. Select **Next**. The **Select Components** step displays.
 6. Select the Java Agent option that matches your CPU type:
-   - **SMA OpCon Agents > SMA OpCon Agent for Java x64** — for 64-bit systems
-   - **SMA OpCon Agents > SMA OpCon Agent for Java x86** — for 32-bit systems
-7. Select **Install**. The component installer opens and the **Welcome** screen displays.
-8. Select **Next**. The **Destination Folder** screen displays.
-9. Accept the default installation path or enter a new location, then select **Next**. The **Select Path for Output Files** screen displays.
-10. Accept the default output path or enter a new location, then select **Next**. The **Setup Type** screen displays.
-11. Select **Complete** or **Custom**, then select **Next**. The **Ready to Install the Program** screen displays.
+   - **SMA OpCon Agents** > **SMA OpCon Agent for Java x64** — for 64-bit systems
+   - **SMA OpCon Agents** > **SMA OpCon Agent for Java x86** — for 32-bit systems
+7. Select **Install**. The component installer opens and the **Welcome** step displays.
+8. Select **Next**. The **Destination Folder** step displays.
+9. Accept the default installation path or enter a new location, then select **Next**. The **Select Path for Output Files** step displays.
+10. Accept the default output path or enter a new location, then select **Next**. The **Setup Type** step displays.
+11. Select **Complete** or **Custom**, then select **Next**. The **Ready to Install the Program** step displays.
 12. Select **Install** to begin copying files.
-13. Select **Finish** on the **InstallShield Wizard Completed** screen.
+13. Select **Finish** on the **InstallShield Wizard Completed** step.
 
 :::note
 The installer writes a log file named `SMA_OpCon_Agent_for_Java_<CPU>_Install.log` to the Windows directory. Consult this file if you suspect installation problems.
@@ -71,8 +71,8 @@ SMA recommends keeping the service set to **Automatic (Delayed Start)**. Changin
 
 To change the service startup settings, complete the following steps:
 
-1. Go to **Start > Control Panel > Administrative Tools** and open **Services**.
-2. Open the **SMA OpCon Java Agent \<CPU\>** service. The **Properties** dialog displays with the **General** tab in focus.
+1. Go to **Start** > **Control Panel** > **Administrative Tools** and open **Services**.
+2. Open the **SMA OpCon Java Agent \<CPU\>** service. The **Properties** window displays with the **General** tab in focus.
 3. Select the desired **Startup type**:
    - **Automatic (Delayed Start)** *(recommended)*
    - **Automatic**
@@ -88,32 +88,38 @@ To change the service startup settings, complete the following steps:
 
 Create a machine record so OpCon can communicate with the newly installed agent. If this machine was previously defined in OpCon, skip this procedure.
 
-**Step 1 — Define the machine**
+#### Define the machine
 
-1. Open **Start > Programs > OpConxps > Enterprise Manager** and log in.
+To define the machine, complete the following steps:
+
+1. Open **Start** > **Programs** > **OpConxps** > **Enterprise Manager** and log in.
 2. Open **Machines** under the **Administration** topic in the Navigation Panel.
 3. Select **Add** on the **Machines** toolbar.
 4. Enter the agent machine's hostname or alias in the **Name** field.
-5. Optionally enter documentation notes in the **Documentation** field.
+5. (Optional) Enter documentation notes in the **Documentation** field.
 6. Select **Java** in the **Machine Type** list.
-7. Enter a unique port number (for example, `3100`) in the **Socket Number** field.
-8. Optionally enter an IPv4 or IPv6 address in the **IP Address** field.
-9. Optionally enter the fully qualified domain name in the **Fully Qualified Domain Name** field.
+7. Enter the socket number in the **Socket Number** field. It must match `SocketNumberToSAM` in `Agent.config`, which defaults to `17100`. If multiple agents are installed on one machine, each needs a unique socket number.
+8. (Optional) Enter an IPv4 or IPv6 address in the **IP Address** field.
+9. (Optional) Enter the fully qualified domain name in the **Fully Qualified Domain Name** field.
 10. Select **Save** on the **Machines** toolbar.
 
-**Step 2 — Configure Java advanced settings**
+#### Configure the Java advanced settings
 
-1. Select **Open Advanced Settings Panel** under the **Advanced Settings** frame. The **Advanced Machine Properties** dialog displays.
+To configure the Java advanced settings, complete the following steps:
+
+1. Select **Open Advanced Settings Panel** under the **Advanced Settings** frame. The **Advanced Machine Properties** window displays.
 2. Select the **Java Settings** tab.
 3. Enter the TCP/IP address of the Java system in the **Java IP Address** field, then select **Update**.
 4. Enter the communication port number in the **Java Socket Number** field, then select **Update**.
 5. Select **Save**.
 
-**Step 3 — Start communication (optional)**
+#### Start communication (optional)
+
+To start communication with the agent, complete the following steps:
 
 1. Right-select the graphic in the **Communication Status** frame to open the menu.
 2. Select **Start Communication**.
-3. Select **X** next to the **Machines** tab to close the screen.
+3. Select **X** next to the **Machines** tab to close it.
 
 ## Upgrade installation
 

@@ -26,7 +26,7 @@ The Configuration Directory is based on where you installed your programs. For m
 The following settings are critical to the operation of the agent with OpCon:
 
 - **MaximumNumberOfJobs**: Determines the maximum number of jobs the agent is allowed to process concurrently
-- **SocketNumberToSAM**: Used for communication between the agent and SMANetCom; this value must match the socket number on the Machines screen in the Enterprise Manager
+- **SocketNumberToSAM**: Used for communication between the agent and SMANetCom; this value must match the socket number defined for the machine in the Enterprise Manager
 - **JORSSocket**: Used for communicating job output information with the Enterprise Manager
 
 ## General settings
@@ -44,7 +44,7 @@ The table contains the network settings for the Java Agent.
 | [TCP/IP Parameters] | Default | Description |
 |--- |--- |--- |
 | SocketNumberToSAM | 17100 | Defines the socket number through which the agent and SMANetCom communicate. This number must match the machine's socket number defined in the Enterprise Manager. If there are multiple agents installed on one machine, each agent must have a unique value. For an up-to-date list of unused ports, refer to the Internet Assigned Numbers Authority at www.iana.org. |
-| AllowedIPAddress_1 | ANY | Determines if communication from SMANetCom to the agent is restricted to one or more TCP/IP addresses. If ANY is specified, the agent accepts communication from any TCP/IP address. If a specific TCP/IP address is defined (for example, `126.40.90.231`), the agent only accepts communication from the specified address. The agent refuses a connection if communication is attempted from another address. This definition enhances communication security by refusing communications from other TCP/IP addresses. If multiple SAMs are on a network, this address ensures the agent only accepts messages from the intended SMANetCom. This parameter is case-sensitive. |
+| AllowedIPAddress_1 | ANY | Determines if communication from SMANetCom to the agent is restricted to one or more TCP/IP addresses. If ANY is specified, the agent accepts communication from any TCP/IP address. If a specific TCP/IP address is defined (for example, `192.0.2.10`), the agent only accepts communication from the specified address. The agent refuses a connection if communication is attempted from another address. This definition enhances communication security by refusing communications from other TCP/IP addresses. If multiple SAMs are on a network, this address ensures the agent only accepts messages from the intended SMANetCom. This parameter is case-sensitive. |
 | AllowedIPAddress_2 | Blank | Same as AllowedIPAddress_1. |
 | AllowedIPAddress_3 | Blank | Same as AllowedIPAddress_1. |
 | AllowedIPAddress_4 | Blank | Same as AllowedIPAddress_1. |
@@ -166,7 +166,7 @@ JobStatusCheckInitialPollDelay=5
 **What happens if SocketNumberToSAM does not match the socket number in OpCon?**
 The agent and OpCon will not be able to communicate. Jobs will not start, and the machine will show as not connected in the Enterprise Manager. Ensure the value in `Agent.config` matches the socket number on the machine record in OpCon.
 
-**Why is job output not appearing in the View Job Output screen?**
+**Why is job output not appearing in View Job Output?**
 The `CaptureJobOutput` setting must be set to `TRUE`. If it is set to `FALSE`, the agent does not write job output files and the View Job Output feature has no data to display.
 
 **Can I allow connections from multiple specific IP addresses?**

@@ -17,7 +17,7 @@ For the Java Agent to run a Java class, the required library files (`.jar` files
 - Use the library directory approach when you want a simple, folder-based method of managing libraries — copy `.jar` files into the directory and the agent picks them up automatically
 - Use the library file approach when you need precise control over which libraries are loaded and where they are located on the file system
 
-During the Java Agent startup, the library files (`.jar` files) are loaded into the class path by either placing a copy of the required `.jar` files in a defined library directory or entering the full path and filename in a file that the agent uses to determine where the `.jar` files are located. For configuration details, refer to [Java Agent Configuration](../administration/configuration-file).
+During the Java Agent startup, the library files (`.jar` files) are loaded into the class path by either placing a copy of the required `.jar` files in a defined library directory or entering the full path and filename in a file that the agent uses to determine where the `.jar` files are located. For configuration details, refer to [Java Agent Configuration](../administration/configuration-file.md).
 
 The Java Agent includes listeners that monitor either the directory containing the `.jar` files or the file listing the `.jar` file information for changes. When changes occur, the agent adds the new information to the class path automatically.
 
